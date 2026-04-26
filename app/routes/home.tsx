@@ -48,11 +48,11 @@ export default function Home() {
           )}
         </div>
 
-          {loadingResumes && (
-            <div className="flex flex-col items-center justify-center">
-              <img src="/images/resume-scan-2.gif" alt="" className="w-[200px]" />
-            </div>
-          )}
+        {loadingResumes && (
+          <div className="flex flex-col items-center justify-center">
+            <img src="/images/resume-scan-2.gif" alt="" className="w-[200px]" />
+          </div>
+        )}
         {!loadingResumes && resumes.length > 0 && (
           <div className="resumes-section">
             {resumes.map((resume) => (
@@ -63,8 +63,12 @@ export default function Home() {
 
         {!loadingResumes && resumes?.length === 0 && (
           <div className="flex flex-col items-center justify-center mt-10 gap-4">
-            <Link to="/upload" className="primary-button w-fit text-xl font-semibold" >
-            Upload Resume</Link>
+            <Link
+              to="/upload"
+              className="primary-button w-fit text-xl font-semibold"
+            >
+              Upload Resume
+            </Link>
           </div>
         )}
       </section>

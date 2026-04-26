@@ -82,7 +82,6 @@ const Upload = () => {
     navigate(`/resume/${uuid}`);
   };
 
-
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget.closest("form");
